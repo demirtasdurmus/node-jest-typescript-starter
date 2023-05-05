@@ -1,5 +1,6 @@
 // import { MongoMemoryServer } from 'mongodb-memory-server';
 // import mongoose from 'mongoose';
+import { server } from './src/index';
 
 // let mongo: MongoMemoryServer;
 
@@ -16,6 +17,10 @@ beforeEach(async () => {
     // for (const collection of collections) {
     //     await collection.deleteMany({});
     // }
+});
+
+afterEach(async () => {
+    server.close();
 });
 
 afterAll(async () => {
