@@ -7,4 +7,5 @@ package-lock.json
 *.yml
 CHANGELOG.md
 coverage
+.github
 
