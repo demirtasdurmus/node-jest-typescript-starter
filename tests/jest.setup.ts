@@ -1,6 +1,6 @@
 // import { MongoMemoryServer } from 'mongodb-memory-server';
 // import mongoose from 'mongoose';
-import { server } from './src/index';
+// import { server } from '../src/server';
 
 // let mongo: MongoMemoryServer;
 
@@ -19,9 +19,9 @@ beforeEach(async () => {
     // }
 });
 
-afterEach(async () => {
-    server.close();
-});
+// afterEach(async () => {
+//     server.close();
+// });
 
 afterAll(async () => {
     // if (mongo) {

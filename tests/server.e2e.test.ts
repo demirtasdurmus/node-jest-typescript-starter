@@ -1,5 +1,5 @@
 import request from 'supertest';
-import { server } from '../src/index';
+import { server } from '../src/server';
 
 describe('Server Test File: Get /', () => {
     it('should return Hello World', async () => {
