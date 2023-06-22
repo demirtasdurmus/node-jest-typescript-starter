@@ -4,8 +4,13 @@ on:
   pull_request:
     # branches: [master]
 
+env:
+  PORT: 3000 # workflow level environment variable
+
 jobs:
   build:
+    env: # job level environment variable
+      PORT: 3000
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,3 +29,8 @@ jobs:
         run: npm run test
       - name: Run Integration Tests
         run: npm run test:e2e
+      
+      - name: outptu env
+        run: |
+          echo $PORT
+          echo ${{ env.PORT }}
