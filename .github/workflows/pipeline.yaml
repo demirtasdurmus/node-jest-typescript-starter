@@ -3,6 +3,8 @@ name: node-jest-typescript-starter
 on:
   pull_request:
     # branches: [master]
+  push:
+    branches: [main]
 
 env:
   PORT: 3000 # workflow level environment variable
