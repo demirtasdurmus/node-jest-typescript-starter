@@ -36,4 +36,4 @@ jobs:
         run: |
           echo $PORT
           echo ${{ env.PORT }}
-          "echo ${{ secrets.USERNAME }}-test"
+          echo "${{ secrets.USERNAME }}-test"
