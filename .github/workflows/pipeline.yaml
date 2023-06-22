@@ -11,8 +11,8 @@ env:
 
 jobs:
   pipeline:
-    env: # job level environment variable
-      PORT: 3000
+    # env: # job level environment variable
+    #   PORT: 3000
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -37,3 +37,15 @@ jobs:
           echo $PORT
           echo ${{ env.PORT }}
           echo "${{ secrets.USERNAME }}-test"
+
+  testing:
+    environment: TEST
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: output env
+        run: |
+          echo "${{ secrets.TEST_USERNAME }}-test"
