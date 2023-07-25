@@ -97,7 +97,6 @@ jobs:
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
-      # Set the GitHub token as an environment variable
       - name: Set GitHub Token
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
