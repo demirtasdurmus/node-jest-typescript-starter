@@ -1,5 +1,6 @@
 {
     "branches": ["development"],
+    "repositoryUrl": "https://github.com/demirtasdurmus/node-jest-typescript-starter.git",
     "plugins": [
         [
             "@semantic-release/commit-analyzer",

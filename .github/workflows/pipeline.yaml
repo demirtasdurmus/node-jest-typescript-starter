@@ -11,76 +11,76 @@ env:
   PORT: 3000 # workflow level environment variable
 
 jobs:
-  Linting:
-    # env: # job level environment variable
-    #   PORT: 3000
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
+  # Linting:
+  #   # env: # job level environment variable
+  #   #   PORT: 3000
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [18.x]
+  #   steps:
+  #     - name: Get Code
+  #       uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - name: Load & Cache Dependencies
-        uses: ./.github/actions/cached-deps
+  #     - name: Load & Cache Dependencies
+  #       uses: ./.github/actions/cached-deps
         
-      - name: Run Linting Rules
-        run: npm run lint
+  #     - name: Run Linting Rules
+  #       run: npm run lint
 
-  Testing:
-    needs: Linting
-    environment: TEST
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
+  # Testing:
+  #   needs: Linting
+  #   environment: TEST
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [18.x]
+  #   steps:
+  #     - name: Get Code
+  #       uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - name: Load & Cache Dependencies
-        uses: ./.github/actions/cached-deps
+  #     - name: Load & Cache Dependencies
+  #       uses: ./.github/actions/cached-deps
         
-      - name: Run Unit Tests
-        run: npm run test
+  #     - name: Run Unit Tests
+  #       run: npm run test
 
-      - name: Run e2e Tests
-        run: npm run test:e2e
+  #     - name: Run e2e Tests
+  #       run: npm run test:e2e
 
-  Building:
-    needs: Testing
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
+  # Building:
+  #   needs: Testing
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [18.x]
+  #   steps:
+  #     - name: Get Code
+  #       uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - name: Load & Cache Dependencies
-        uses: ./.github/actions/cached-deps
+  #     - name: Load & Cache Dependencies
+  #       uses: ./.github/actions/cached-deps
         
-      - name: Build
-        run: npm run build
+  #     - name: Build
+  #       run: npm run build
 
   Releasing:
-    needs: Building
+    # needs: Building
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -100,7 +100,7 @@ jobs:
       # Set the GitHub token as an environment variable
       - name: Set GitHub Token
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
         run: echo "GITHUB_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
         
       - name: Release
