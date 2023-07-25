@@ -55,6 +55,6 @@
             }
         ]
     ],
-    "dryRun": true,
+    "dryRun": false,
     "debug": true
 }

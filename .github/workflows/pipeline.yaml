@@ -100,7 +100,7 @@ jobs:
       # Set the GitHub token as an environment variable
       - name: Set GitHub Token
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: echo "GITHUB_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
         
       - name: Release
