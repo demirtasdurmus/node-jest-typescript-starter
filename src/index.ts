@@ -1,11 +1,8 @@
 import { server } from './server';
 
-server.listen(3000, () => {
+const port = process.env.PORT || 3000;
+
+server.listen(port, () => {
     // eslint-disable-next-line no-console
-    console.log('Server is listening on port 3000');
+    console.log(`Server is listening on port ${port}`);
 });
-
-const port = process.env.PORT;
-
-// eslint-disable-next-line no-console
-console.log(port);

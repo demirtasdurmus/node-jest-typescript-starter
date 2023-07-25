@@ -1,51 +1,107 @@
-name: node-jest-typescript-starter
+name: Linting, Testing, Building and Deploying
 
 on:
   pull_request:
-    # branches: [master]
+    branches: [main, development]
   push:
-    branches: [main]
+    branches: [main, development]
+  workflow_dispatch:
 
 env:
   PORT: 3000 # workflow level environment variable
 
 jobs:
-  pipeline:
+  Linting:
     # env: # job level environment variable
     #   PORT: 3000
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
     steps:
-      - uses: actions/checkout@v3
+      - name: Get Code
+        uses: actions/checkout@v3
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: npm install
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+        
       - name: Run Linting Rules
         run: npm run lint
-      - name: Run Unit Tests
-        run: npm run test
-      - name: Run Integration Tests
-        run: npm run test:e2e
-      
-      - name: output env
-        run: |
-          echo $PORT
-          echo ${{ env.PORT }}
-          echo "${{ secrets.USERNAME }}-test"
 
-  testing:
+  Testing:
+    needs: Linting
     environment: TEST
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps:
+      - name: Get Code
+        uses: actions/checkout@v3
 
-      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
-      - name: output env
-        run: |
-          echo "${{ secrets.TEST_USERNAME }}-test"
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+        
+      - name: Run Unit Tests
+        run: npm run test
+
+      - name: Run e2e Tests
+        run: npm run test:e2e
+
+  Building:
+    needs: Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+        
+      - name: Build
+        run: npm run build
+
+  Releasing:
+    needs: Building
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+
+      # Set the GitHub token as an environment variable
+      - name: Set GitHub Token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "GITHUB_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
+        
+      - name: Release
+        run: npx semantic-release

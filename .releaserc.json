@@ -1,0 +1,8 @@
+{
+    "branches": ["development"],
+    "dryRun": true,
+    "debug": true,
+    "npm": {
+        "publish": false
+    }
+}
