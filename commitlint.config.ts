@@ -7,10 +7,10 @@ const Configuration: UserConfig = {
      * Referenced packages must be installed
      */
     extends: ['@commitlint/config-conventional'],
-    /*
-     * Resolve and load conventional-changelog-atom from node_modules.
-     * Referenced packages must be installed
-     */
+    // /*
+    //  * Resolve and load conventional-changelog-atom from node_modules.
+    //  * Referenced packages must be installed
+    //  */
     // parserPreset: 'conventional-changelog-atom',
     // /*
     //  * Resolve and load @commitlint/format from node_modules.
@@ -23,10 +23,10 @@ const Configuration: UserConfig = {
     // rules: {
     //     'type-enum': [RuleConfigSeverity.Error, 'always', ['foo']],
     // },
-    // /*
-    //  * Functions that return true if commitlint should ignore the given message.
-    //  */
-    // ignores: [(commit) => commit === ''],
+    /*
+     * Functions that return true if commitlint should ignore the given message.
+     */
+    ignores: [(message) => /^Bumps \[.+]\(.+\) from .+ to .+\.$/m.test(message)],
     // /*
     //  * Whether commitlint uses the default ignore rules.
     //  */
