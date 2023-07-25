@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.1.2...v1.2.0) (2023-07-25)
+
+
+### Features
+
+* **root:** deleted the comment ([04ba49b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/04ba49b3c8146ddecc05fe45f2e152adb297bc47))
+* **root:** deleted the comment ([5060dd9](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/5060dd99e91cb55fd876cc3aef36d47b6943090c))
+
 ## [1.1.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.1.1...v1.1.2) (2023-07-25)
 
 
