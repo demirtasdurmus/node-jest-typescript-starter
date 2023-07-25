@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.0.0...v1.1.0) (2023-07-25)
+
+
+### Features
+
+* **root:** enabled github workflows with semantic versioning in the end ([f6ec7ab](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/f6ec7abbbc5c870033518d4a1712d66987bc13e3))
+
 # 1.0.0 (2023-07-25)
 
 
