@@ -23,5 +23,6 @@
         "noImplicitThis": false /* Enable error reporting when 'this' is given the type 'any'. */,
         /* Completeness */
         "skipLibCheck": true /* Skip type checking all .d.ts files. */
-    }
+    },
+    "exclude": ["commitlint.config.js"]
 }
