@@ -1,3 +1,13 @@
+## [1.1.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.1.1...v1.1.2) (2023-07-25)
+
+
+### Bug Fixes
+
+* **root:** add branch to relaeserc ([45fbb4b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/45fbb4b151265efda50bd45af0914a3ff5830d47))
+* **root:** add comment ([9e7c41b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/9e7c41bddd0b99bda8bfed1b387cadbec5b33345))
+* **ci:** remove redundant conf on releaserc ([0a61e87](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/0a61e870932f379ac39b3d6859d4c577482ed290))
+* **root:** update comment ([21f480f](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/21f480f7fcadcc40c14c2216a49e6b10039956c5))
+
 # [1.1.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.0.0...v1.1.0) (2023-07-25)
 
 
