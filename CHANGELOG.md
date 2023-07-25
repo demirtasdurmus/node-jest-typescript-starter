@@ -3,6 +3,22 @@
 
 ### Bug Fixes
 
+* **root:** add branch to relaeserc ([45fbb4b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/45fbb4b151265efda50bd45af0914a3ff5830d47))
+* **root:** add comment ([9e7c41b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/9e7c41bddd0b99bda8bfed1b387cadbec5b33345))
+* **ci:** remove redundant comment in pipeline ([a56bc95](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/a56bc9528b5b141cf69d74f2f80d9c8c53e9d57b))
+* **ci:** remove redundant conf on releaserc ([0a61e87](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/0a61e870932f379ac39b3d6859d4c577482ed290))
+* **root:** update comment ([21f480f](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/21f480f7fcadcc40c14c2216a49e6b10039956c5))
+
+
+### Features
+
+* **root:** enabled github workflows with semantic versioning in the end ([f6ec7ab](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/f6ec7abbbc5c870033518d4a1712d66987bc13e3))
+
+# [1.1.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.0.0...v1.1.0) (2023-07-25)
+
+
+### Bug Fixes
+
 * **root:** add comment ([9e7c41b](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/9e7c41bddd0b99bda8bfed1b387cadbec5b33345))
 * **ci:** remove redundant comment in pipeline ([a56bc95](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/a56bc9528b5b141cf69d74f2f80d9c8c53e9d57b))
 * **ci:** remove redundant conf on releaserc ([0a61e87](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/0a61e870932f379ac39b3d6859d4c577482ed290))
