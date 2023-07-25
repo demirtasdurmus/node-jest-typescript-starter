@@ -24,6 +24,8 @@
         "@commitlint/cli": "^17.6.5",
         "@commitlint/config-conventional": "^17.6.5",
         "@commitlint/prompt-cli": "^17.6.5",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
         "@types/jest": "^29.5.1",
         "@types/node": "^18.16.3",
         "@types/supertest": "^2.0.12",
