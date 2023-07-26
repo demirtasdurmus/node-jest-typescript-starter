@@ -4,8 +4,8 @@ on:
   pull_request:
     branches: [main, development]
 
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
 
   workflow_dispatch:
 
@@ -37,7 +37,6 @@ jobs:
 
   Testing:
     needs: Linting
-    environment: TEST
     runs-on: ubuntu-latest
     strategy:
       matrix:
