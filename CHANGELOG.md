@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.6.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.1...v1.6.0) (2023-07-26)
+
+
+### Features
+
+* **src:** added comment for feature testing ([ba7f498](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/ba7f4987d6d6bd92be4162137a47138195eee34f))
+
 # [1.6.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.1...v1.6.0-dev.1) (2023-07-26)
 
 
