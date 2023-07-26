@@ -1,3 +1,17 @@
+# Node-Jest-Typescript-Starter Changelog
+
+# [1.5.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.4.0...v1.5.0-dev.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* **release:** updated release branch name ([0d665da](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/0d665da06333f7be2f404259a564ba8eb2a6cfe0))
+
+
+### Features
+
+* **root:** completed workflow for automated releases ([84bda07](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/84bda079e70f01dd7fdb8c0073c3d6b4a139ddf9))
+
 # [1.4.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.3.1...v1.4.0) (2023-07-25)
 
 
