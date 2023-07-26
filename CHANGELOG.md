@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.5.0-dev.3](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.0-dev.2...v1.5.0-dev.3) (2023-07-26)
+
+
+### Bug Fixes
+
+* **ci:** upgrade workflow for push access to protected branch ([4e23fa9](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/4e23fa9612d7fa5b3e21bfdabc0ad021aff0c8a1))
+
 # [1.5.0-dev.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2023-07-26)
 
 
