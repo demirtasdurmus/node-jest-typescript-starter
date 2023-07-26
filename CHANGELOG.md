@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+## [1.5.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.0...v1.5.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* **release:** updated semantic release commit analyzer plugin conf ([b0cd9a2](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/b0cd9a2bf851cf0a13d0184983782b185dc07a1c))
+
 # [1.5.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.4.0...v1.5.0) (2023-07-26)
 
 
