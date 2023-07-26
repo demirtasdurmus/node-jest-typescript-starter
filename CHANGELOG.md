@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.5.0-dev.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.0-dev.1...v1.5.0-dev.2) (2023-07-26)
+
+
+### Bug Fixes
+
+* **ci:** upgrade action node version to 3 ([a4e826a](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/a4e826a51eb0e51e574f4c705e05b1ffcd1b3e56))
+
 # [1.5.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.4.0...v1.5.0-dev.1) (2023-07-26)
 
 
