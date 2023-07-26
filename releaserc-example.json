@@ -19,6 +19,19 @@
             "@semantic-release/release-notes-generator",
             {
                 "preset": "angular",
+                "presetConfig": {
+                    "types": [
+                        { "type": "feat", "section": "Features" },
+                        { "type": "fix", "section": "Bug Fixes" },
+                        { "type": "perf", "section": "Performance Improvements" },
+                        { "type": "revert", "section": "Reverts" },
+                        { "type": "docs", "section": "Documentation" },
+                        { "type": "style", "section": "Styles", "hidden": true },
+                        { "type": "chore", "section": "Miscellaneous Chores", "hidden": true },
+                        { "type": "refactor", "section": "Code Refactoring", "hidden": true },
+                        { "type": "test", "section": "Tests", "hidden": true }
+                    ]
+                },
                 "writerOpts": {
                     "commitsSort": ["subject", "scope"]
                 }

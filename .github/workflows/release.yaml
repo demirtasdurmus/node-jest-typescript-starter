@@ -1,0 +1,31 @@
+name: Releasing Workflow With Semantic Release
+
+on:
+  push:
+    branches: [main, development, release/*]
+
+jobs:
+  Releasing:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+
+      - name: Set GitHub Token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "GITHUB_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
+        
+      - name: Release
+        run: npx semantic-release
