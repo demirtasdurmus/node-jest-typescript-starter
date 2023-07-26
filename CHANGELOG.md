@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+## [1.6.1-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.0...v1.6.1-dev.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* **src:** removed the random comment to test patch versioning ([ae82284](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/ae82284179c732ea730a364d5fbd0a853e84ad58))
+
 # [1.6.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.5.1...v1.6.0) (2023-07-26)
 
 
