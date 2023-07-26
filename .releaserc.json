@@ -1,11 +1,30 @@
 {
-    "branches": ["development", "main"],
+    "branches": ["main", { "name": "development", "prerelease": "dev" }, { "name": "release/*", "prerelease": "rc" }],
     "plugins": [
-        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "angular",
+                "releaseRules": [
+                    { "type": "docs", "scope": "README", "release": "patch" },
+                    { "type": "refactor", "release": "patch" },
+                    { "type": "style", "release": "patch" },
+                    { "type": "ci", "release": "patch" },
+                    { "type": "test", "release": "patch" },
+                    { "type": "chore", "release": "patch" }
+                ]
+            }
+        ],
         [
             "@semantic-release/release-notes-generator",
             {
                 "preset": "angular",
+                "host": "https://github.com",
+                "owner": "demirtasdurmus",
+                "repo": "node-jest-typescript-starter",
+                "parserOpts": {
+                    "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+                },
                 "writerOpts": {
                     "commitsSort": ["subject", "scope"]
                 }
@@ -14,13 +33,8 @@
         [
             "@semantic-release/changelog",
             {
-                "changelogFile": "CHANGELOG.md"
-            }
-        ],
-        [
-            "@semantic-release/npm",
-            {
-                "npmPublish": false
+                "changelogFile": "CHANGELOG.md",
+                "changelogTitle": "# Node-Jest-Typescript-Starter Changelog"
             }
         ],
         [
@@ -40,6 +54,5 @@
                 "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
             }
         ]
-    ],
-    "debug": true
+    ]
 }

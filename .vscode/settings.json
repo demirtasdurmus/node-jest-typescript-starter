@@ -1,5 +1,5 @@
 {
-    "cSpell.words": ["commitlint"],
+    "cSpell.words": ["commitlint", "demirtasdurmus"],
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
