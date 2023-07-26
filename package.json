@@ -1,6 +1,6 @@
 {
     "name": "node-jest-typescript-starter",
-    "version": "1.6.1-dev.1",
+    "version": "1.6.1",
     "description": "",
     "main": "index.js",
     "scripts": {
