@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+## [1.6.2-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.1...v1.6.2-dev.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* eslint config file ([448c230](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/448c2301d3ac9414105e24202313b372f1df5fca))
+
 ## [1.6.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.0...v1.6.1) (2023-07-26)
 
 
