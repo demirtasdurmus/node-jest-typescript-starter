@@ -59,8 +59,32 @@ jobs:
       - name: Run e2e Tests
         run: npm run test:e2e
 
-  Building:
+  Danger-Review:
+    env:
+      DANGER_GITHUB_API_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
+      GITHUB_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
     needs: Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+        
+      - name: Run Danger
+        run: npm run danger:ci
+  
+  Building:
+    needs: Danger-Review
     runs-on: ubuntu-latest
     strategy:
       matrix:
