@@ -1,5 +1,13 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.7.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.2-dev.1...v1.7.0-dev.1) (2023-08-14)
+
+
+### Features
+
+* add danger file with basic conf ([3af8dfa](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/3af8dfa1b28d22bb7c7f70b7d1881336419feb30))
+* add further conf for danger ci ([e59f7d1](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/e59f7d106e61d32d75b5a171f29f9d419aaf58e3))
+
 ## [1.6.2-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.1...v1.6.2-dev.1) (2023-08-14)
 
 
