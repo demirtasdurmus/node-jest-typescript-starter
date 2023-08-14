@@ -27,7 +27,7 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config --global user.name 'Durmus Demirtas'
+          git config --global user.name 'Semantic Release'
           git config --global user.email 'demirtasdurmus@gmail.com'
 
       - name: Set GitHub Token
