@@ -61,7 +61,6 @@ jobs:
 
   Danger-Review:
     env:
-      DANGER_GITHUB_API_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
       GITHUB_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
     needs: Testing
     runs-on: ubuntu-latest
@@ -79,6 +78,11 @@ jobs:
 
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'Danger CI'
+          git config --global user.email 'demirtasdurmus@gmail.com'
         
       - name: Run Danger
         run: npm run danger:ci
