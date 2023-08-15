@@ -12,7 +12,7 @@ Before the reviewers could start with a code review process, please ensure that 
 - Each variable and function inside component or service should contain a short code description (JSDoc-TSDoc)
 - In our Typescript applications we always try to avoid the type **any** and define new types or interfaces therefore
 - For the names of classes, functions or variables we use **camelCase** style (capitalized style for classes)
-- For routing inside our applications and REST API URLs we always use **kebab-case** naming style (e.g. */my-api/add-user/123-456*)
+- For routing inside our applications and REST API URLs we always use **kebab-case** naming style (e.g. */api/users/123-456*)
 - For (S)CSS selectors we also prefer to use kebab-case naming style (e.g. *.job-container { margin: 5px; }*)
 - Code documentation for functions, classes, interfaces etc. should be written in capitalized style
 `);
@@ -100,7 +100,7 @@ modifiedHtmlFiles.forEach((file) => {
 const hasTests = danger.git.modified_files.filter((path) => path.endsWith('.spec.ts') || path.endsWith('.e2e-spec.ts'));
 if (hasTests.length === 0) {
     warn(
-        ':nerd: Well, it seems like that there are no tests in this PR. Please think about the test coverage of the added functionality and feel free to ask for help if you need it.',
+        ':thinking: Well, it seems like that there are no tests in this PR. Please think about the test coverage of the added functionality and feel free to ask for help if you need it.',
     );
 } else {
     message(':+1: Wow, there are tests in the PR, let*s keep it going!');
