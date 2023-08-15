@@ -1,5 +1,13 @@
 {
-    "cSpell.words": ["commitlint", "Dangerfiles", "demirtasdurmus", "documentarians", "lockfiles"],
+    "cSpell.words": [
+        "commitlint",
+        "dangerfile",
+        "Dangerfiles",
+        "demirtasdurmus",
+        "documentarians",
+        "lockfiles",
+        "tada"
+    ],
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
