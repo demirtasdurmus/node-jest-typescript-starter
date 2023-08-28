@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.MY_GITHUB_SECRET }}
+          persist-credentials: false
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -25,15 +25,10 @@ jobs:
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
-      - name: Set up Git
-        run: |
-          git config --global user.name 'Durmus Demirtas'
-          git config --global user.email 'demirtasdurmus@gmail.com'
-
-      - name: Set GitHub Token
+      - name: Set up Git and run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_SECRET }}
-        run: echo "GITHUB_TOKEN=${GITHUB_TOKEN}" >> $GITHUB_ENV
-        
-      - name: Release
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+        run: |
+          git config --global user.name 'semantic_release_bot'
+          git config --global user.email 'demirtasdurmus@gmail.com'
+          npx semantic-release
