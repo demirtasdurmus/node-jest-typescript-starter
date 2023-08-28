@@ -77,15 +77,13 @@ jobs:
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
-      - name: Set up Git
+      - name: Set up Git and run Danger
         env:
           GITHUB_TOKEN: ${{ secrets.DANGER_CI_TOKEN }}
         run: |
           git config --global user.name 'danger_ci_bot'
           git config --global user.email 'demirtasdurmus@gmail.com'
-        
-      - name: Run Danger
-        run: npm run danger:ci
+          npm run danger:ci
   
   # This job simulates a deployment to a staging environment
   Building:
