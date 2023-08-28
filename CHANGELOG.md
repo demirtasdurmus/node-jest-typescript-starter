@@ -1,5 +1,16 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.7.0-dev.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.7.0-dev.1...v1.7.0-dev.2) (2023-08-28)
+
+
+### Bug Fixes
+
+* configure semantic release and danger ci tokens ([91c44ed](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/91c44edf2b50c0c7a85fe3eb3e9f45ca86d6e12c))
+* fix ci configuration for danger and semantic release ([081c204](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/081c2045aca66cfa3891295a40849568f6fb3141))
+* fix ci configuration for danger and semantic release-1 ([ae1b29d](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/ae1b29dde99c7a956e3848a40c31b58b232e6fc6))
+* fix ci configuration for danger and semantic release-2 ([2b11776](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/2b1177698daf7dae5edecdfc95d5c6bee2604e0e))
+* fix ci configuration for danger and semantic release-3 ([7df9132](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/7df9132603fc1f6906d5f5a975714fa175d890b8))
+
 # [1.7.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.2-dev.1...v1.7.0-dev.1) (2023-08-14)
 
 
