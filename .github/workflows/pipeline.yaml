@@ -2,7 +2,7 @@ name: Linting, Testing, Building & Danger Review
 
 on:
   pull_request:
-    branches: [main, development]
+    branches: [develop]
 
   push:
     branches: [release/*]

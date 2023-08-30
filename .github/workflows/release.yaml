@@ -29,17 +29,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
         run: |
-          git config --global user.name 'semantic_release_bot'
-          git config --global user.email 'demirtasdurmus@gmail.com'
+          # git config --global user.name 'semantic_release_bot'
+          # git config --global user.email 'demirtasdurmus@gmail.com'
           npx semantic-release
-
-          # Get the current branch name
-          current_branch=${{ github.ref_name }}
-
-          # If the current branch is main, pull changes and rebase development
-          if [ "$current_branch" = "main" ]; then
-            git pull origin main
-            git checkout development
-            git rebase main
-            git push origin development
-          fi
+        
+      - name: Rebase Develop Branch if Release Branch is Merged to Main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git pull origin main
+          git checkout develop
+          git pull origin develop
+          git rebase main
+          git push origin develop
