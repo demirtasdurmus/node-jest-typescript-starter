@@ -25,10 +25,6 @@ jobs:
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
-      - name: display github object
-        run: |
-          echo ${{ toJson(github) }}
-
       - name: Set up Git and run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
@@ -38,7 +34,7 @@ jobs:
           npx semantic-release
 
           # Get the current branch name
-          current_branch=$(git rev-parse --abbrev-ref HEAD)
+          current_branch=${{ github.ref_name }}
 
           # If the current branch is main, pull changes and rebase development
           if [ "$current_branch" = "main" ]; then
