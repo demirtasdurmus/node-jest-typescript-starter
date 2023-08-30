@@ -100,8 +100,8 @@ jobs:
 
       - name: Set up Git and run Danger
         env:
-          GITHUB_TOKEN: ${{ secrets.DANGER_CI_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DANGER_CI_TOKEN_SEPARATE }}
         run: |
-          git config --global user.name 'danger_ci_bot'
-          git config --global user.email 'demirtasdurmus@gmail.com'
+          git config --global user.name 'dangercibot'
+          git config --global user.email 'dangercibot@gmail.com'
           npm run danger:ci
