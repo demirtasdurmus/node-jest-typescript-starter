@@ -2,7 +2,7 @@ name: Releasing Workflow With Semantic Release
 
 on:
   push:
-    branches: [main, development, release/*]
+    branches: [main, release/*]
 
 jobs:
   Releasing:
@@ -25,6 +25,10 @@ jobs:
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
 
+      - name: display github object
+        run: |
+          echo ${{ toJson(github) }}
+
       - name: Set up Git and run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
@@ -32,3 +36,14 @@ jobs:
           git config --global user.name 'semantic_release_bot'
           git config --global user.email 'demirtasdurmus@gmail.com'
           npx semantic-release
+
+          # Get the current branch name
+          current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+          # If the current branch is main, pull changes and rebase development
+          if [ "$current_branch" = "main" ]; then
+            git pull origin main
+            git checkout development
+            git rebase main
+            git push origin development
+          fi

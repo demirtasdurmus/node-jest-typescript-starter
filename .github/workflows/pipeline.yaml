@@ -1,8 +1,11 @@
-name: Linting, Testing, Building
+name: Linting, Testing, Building & Danger Review
 
 on:
   pull_request:
     branches: [main, development]
+
+  push:
+    branches: [release/*]
 
   workflow_dispatch:
 
@@ -11,8 +14,8 @@ env:
 
 jobs:
   Linting:
-    # env: # job level environment variable
-    #   PORT: 3000
+    env: # job level environment variable
+      HOST: 127.0.0.1
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -55,9 +58,31 @@ jobs:
 
       - name: Run e2e Tests
         run: npm run test:e2e
+  
+  # This job checks if the project builds successfully
+  Building:
+    needs: Testing
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Load & Cache Dependencies
+        uses: ./.github/actions/cached-deps
+        
+      - name: Build
+        run: npm run build
 
   Danger-Review:
-    needs: Testing
+    needs: Building
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -83,25 +108,3 @@ jobs:
           git config --global user.name 'danger_ci_bot'
           git config --global user.email 'demirtasdurmus@gmail.com'
           npm run danger:ci
-  
-  # This job simulates a deployment to a staging environment
-  Building:
-    needs: Danger-Review
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Load & Cache Dependencies
-        uses: ./.github/actions/cached-deps
-        
-      - name: Build
-        run: npm run build
