@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [1.8.0-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.7.0...v1.8.0-rc.1) (2023-08-30)
+
+
+### Features
+
+* update ci and release rules, so marked this as a new feature ([b607a36](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/b607a364ff8826659316ac6cc904fcbd29813f21))
+
 # [1.7.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.6.1...v1.7.0) (2023-08-28)
 
 
