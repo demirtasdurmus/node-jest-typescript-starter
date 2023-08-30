@@ -1,5 +1,19 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [2.0.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.7.0...v2.0.0) (2023-08-30)
+
+
+### Features
+
+* converted some deps to dev deps ([cbbead6](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/cbbead62117e085bf95718540277afb93c9535ee))
+* update ci and release rules, so marked this as a new feature ([b607a36](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/b607a364ff8826659316ac6cc904fcbd29813f21))
+* update ci and release rules, so marked this as a new feature-1 ([716202a](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/716202ab81a7246d2995af0a3a5bb398c51429c8))
+
+
+### BREAKING CHANGES
+
+* converted rimraf to dev dep
+
 # [2.0.0-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.7.0...v2.0.0-rc.1) (2023-08-30)
 
 
