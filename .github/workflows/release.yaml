@@ -1,4 +1,4 @@
-name: Releasing Workflow With Semantic Release
+name: Releasing With Semantic Release
 
 on:
   push:
@@ -32,14 +32,3 @@ jobs:
           git config --global user.name 'semantic_release_bot'
           git config --global user.email 'demirtasdurmus@gmail.com'
           npx semantic-release
-        
-      - name: Rebase Develop Branch if Release Branch is Merged to Main
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git config --global user.name 'demirtasdurmus'
-          git config --global user.email 'demirtasdurmus@gmail.com'
-          git pull origin main
-          git checkout develop
-          git pull origin develop
-          git rebase main
-          git push origin develop
