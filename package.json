@@ -1,6 +1,6 @@
 {
     "name": "node-jest-typescript-starter",
-    "version": "1.7.0",
+    "version": "2.0.0-rc.1",
     "description": "",
     "main": "index.js",
     "scripts": {
@@ -42,13 +42,11 @@
         "lint-staged": "^13.2.2",
         "nodemon": "^2.0.22",
         "prettier": "2.8.8",
+        "rimraf": "^5.0.1",
         "semantic-release": "^21.0.7",
         "supertest": "^6.3.3",
         "ts-jest": "^29.1.0",
         "ts-node": "^10.9.1",
         "typescript": "^5.0.4"
-    },
-    "dependencies": {
-        "rimraf": "^5.0.0"
     }
 }
