@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+## [2.0.1-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.0...v2.0.1-rc.1) (2023-09-08)
+
+
+### Bug Fixes
+
+* update linting and formatting npm scripts ([22ff785](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/22ff785ee6a9f16c9cd426116157a1d552020245))
+
 # [2.0.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v1.7.0...v2.0.0) (2023-08-30)
 
 
