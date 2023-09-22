@@ -66,3 +66,4 @@ This project is licensed under the ISC License. See the LICENSE file for details
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+![pipeline](https://github.com/demirtasdurmus/node-jest-typescript-starter/actions/workflows/pipeline.yaml/badge.svg)
