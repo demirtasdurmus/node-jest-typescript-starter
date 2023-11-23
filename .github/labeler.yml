@@ -1,0 +1,26 @@
+###############################################################################
+# COMMON
+###############################################################################
+
+# Add 'root' label to any root file changes
+root:
+  - '*'
+  - .github/**
+  - .husky/**
+  - .vscode/**
+
+# Add 'env' label to any change to '.env.sample' files within the packages
+env:
+  - .env.sample
+
+# Add 'dependency' label to any change to 'package.lock' file
+dependency:
+  - package.lock
+
+# Add 'tests' label to any change within the 'tests' folder
+test:
+  - tests/**
+
+# Add 'api' label to any change within the 'src'
+api:
+  - src/**
