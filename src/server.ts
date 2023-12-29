@@ -1,4 +1,4 @@
-import { IncomingMessage, ServerResponse, createServer, Server } from 'http';
+import { IncomingMessage, Server, ServerResponse, createServer } from 'http';
 
 process.on('uncaughtException', (err: unknown) => {
     // eslint-disable-next-line no-console

@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
-import { danger, message, markdown, warn } from 'danger';
+import { danger, markdown, message, warn } from 'danger';
 
 markdown(`
 :wave: Hello ${danger.github.pr.user.login} and thank you for your contribution!
