@@ -34,6 +34,23 @@
 
 * THIS BREAKS EVERYTHING
 
+# [3.0.0-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v3.0.0-rc.1) (2023-12-29)
+
+
+### Features
+
+* add arbitrary comment for new staging release ([df76459](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/df76459fdbd3a0ffcc191ab9fb1d21596c4ea4b1))
+* add prettier organize imports ([8a791ee](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/8a791eefc0a7aa2eb014a03e2bd447bde0fc0008))
+* extend semantic release branching ([89ed334](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/89ed3341896799dac99d671fc291887361aefb0c))
+* fix linter and formatter ([2cd43ff](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/2cd43ffabf4eaedd2218f92fa3643f46127ef540))
+* this will be a breaking change ([4f0df99](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/4f0df99b7786d5d8d388424145aacadc19990fa6))
+* upgrade node version in the ci environment ([6210c0d](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/6210c0d487c7b06efea0344e9dee72bbe4c090f9))
+
+
+### BREAKING CHANGES
+
+* THIS BREAKS EVERYTHING
+
 # [2.1.0-dev.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.1.0-dev.1...v2.1.0-dev.2) (2023-12-29)
 
 
