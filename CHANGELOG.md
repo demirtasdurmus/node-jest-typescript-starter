@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [2.1.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v2.1.0) (2023-12-29)
+
+
+### Features
+
+* add prettier organize imports ([8a791ee](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/8a791eefc0a7aa2eb014a03e2bd447bde0fc0008))
+
 # [2.1.0-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v2.1.0-rc.1) (2023-12-29)
 
 
