@@ -2,25 +2,22 @@ name: Releasing With Semantic Release
 
 on:
   push:
-    branches: [ main, develop ,release ]
+    branches: [ main, develop, release ]
 
 jobs:
   Releasing:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
       - name: Get Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Use Node.js 20.9.0
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.9.0
 
       - name: Load & Cache Dependencies
         uses: ./.github/actions/cached-deps
