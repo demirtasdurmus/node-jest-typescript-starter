@@ -1,5 +1,14 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [2.1.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v2.1.0-dev.1) (2023-12-29)
+
+
+### Features
+
+* add prettier organize imports ([8a791ee](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/8a791eefc0a7aa2eb014a03e2bd447bde0fc0008))
+* extend semantic release branching ([89ed334](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/89ed3341896799dac99d671fc291887361aefb0c))
+* fix linter and formatter ([2cd43ff](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/2cd43ffabf4eaedd2218f92fa3643f46127ef540))
+
 # [2.1.0](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v2.1.0) (2023-12-29)
 
 
