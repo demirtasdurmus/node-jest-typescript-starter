@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [3.0.0-rc.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v3.0.0-rc.1...v3.0.0-rc.2) (2023-12-29)
+
+
+### Features
+
+* merge main into release ([1de363c](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/1de363cf3b9e77dc21328f91d2158132b0d9ce76))
+
 # [3.0.0-rc.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v3.0.0-rc.1) (2023-12-29)
 
 
