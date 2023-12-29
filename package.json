@@ -1,6 +1,6 @@
 {
     "name": "node-jest-typescript-starter",
-    "version": "2.1.0",
+    "version": "3.0.0-rc.1",
     "scripts": {
         "commit": "commit",
         "clean": "rimraf dist",
