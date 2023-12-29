@@ -1,5 +1,12 @@
 # Node-Jest-Typescript-Starter Changelog
 
+# [2.1.0-dev.2](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.1.0-dev.1...v2.1.0-dev.2) (2023-12-29)
+
+
+### Features
+
+* upgrade node version in the ci environment ([6210c0d](https://github.com/demirtasdurmus/node-jest-typescript-starter/commit/6210c0d487c7b06efea0344e9dee72bbe4c090f9))
+
 # [2.1.0-dev.1](https://github.com/demirtasdurmus/node-jest-typescript-starter/compare/v2.0.1...v2.1.0-dev.1) (2023-12-29)
 
 
